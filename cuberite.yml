@@ -18,6 +18,7 @@ jobs:
     trigger: true
   - get: resource-cuberite-master-src
     trigger: true
+  - get: scripts
   - task: cmake
     file: resource-cuberite-concourse/tasks/cmake.yml
   - task: build
