@@ -1,5 +1,7 @@
 #!/bin/bash
 
-cmake ../resource-cuberite-master-src
+cmake .
 
 make -j4
+
+cp -r Server ../built-cuberite-master-src/
