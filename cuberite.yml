@@ -4,12 +4,22 @@ resources:
   source:
     uri: https://github.com/cuberite/cuberite
     branch: master
+- name: resource-cuberite-release-src
+  type: git
+  source:
+    uri: https://github.com/cuberite/cuberite
+    branch: release
 - name: resource-cuberite-concourse
   type: git
   source:
     uri: https://github.com/cuberite/concourse
     branch: master
-
+- name: every-four-weeks
+  type: time
+  source:
+    interval: 650h
+    days:
+    - Sunday
 
 jobs:
 - name: job-build-cuberite-master
@@ -18,6 +28,18 @@ jobs:
     trigger: true
   - get: resource-cuberite-master-src
     trigger: true
+  - task: build
+    file: resource-cuberite-concourse/tasks/build.yml
+  - task: archive
+    file: resource-cuberite-concourse/tasks/archive.yml
+
+- name: job-build-cuberite-release
+  plan:
+  - get: resource-cuberite-concourse
+    trigger: true
+  - get: every-four-weeks
+    trigger: true
+  - get: resource-cuberite-release-src
   - task: build
     file: resource-cuberite-concourse/tasks/build.yml
   - task: archive
