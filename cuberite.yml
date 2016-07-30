@@ -20,3 +20,5 @@ jobs:
     trigger: true
   - task: build
     file: resource-cuberite-concourse/tasks/build.yml
+  - task: archive
+    file: resource-cuberite-concourse/tasks/archive.yml
