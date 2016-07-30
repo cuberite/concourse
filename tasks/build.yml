@@ -8,7 +8,7 @@ image_resource:
 
 inputs:
 - name: resource-cuberite-master-src
-- name: scripts
+- name: ../scripts
 
 outputs:
 - name: built-cuberite-master-src
