@@ -15,3 +15,4 @@ outputs:
 run:
   path: ls
   args: [-la]
+  dir: cmake-prepared-cuberite-master-src
