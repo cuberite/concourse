@@ -1,0 +1,21 @@
+resources:
+- name: resource-cuberite-master-src
+  type: git
+  source:
+    uri: https://github.com/cuberite/cuberite
+    branch: master
+- name: resource-cuberite-concourse
+  type: git
+  source:
+    uri: https://github.com/cuberite/concourse
+    branch: master
+
+
+jobs:
+- name: job-build-cuberite-master
+  plan:
+  - get: resource-cuberite-concourse
+  - get: resource-cuberite-master-src
+    trigger: true
+  - task: image-setup
+    file: resource-cuberite-concourse/tasks/build.yml
