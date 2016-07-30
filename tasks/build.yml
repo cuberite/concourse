@@ -7,10 +7,10 @@ image_resource:
     repository: kaskada/cmake-gcc5
 
 inputs:
-- name: cmaked-cuberite-master-src
+  - name: cmaked-cuberite-master-src
 
 outputs:
-- name: built-cuberite-master-src
+  - name: built-cuberite-master-src
 
 run:
   path: ls
