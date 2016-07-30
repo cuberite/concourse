@@ -23,9 +23,9 @@ jobs:
   - get: resource-cuberite-master-src
     trigger: true
   - task: build
-    file: resource-cuberite-concourse/tasks/build.yml
+    file: resource-cuberite-concourse/master/tasks/build.yml
   - task: archive
-    file: resource-cuberite-concourse/tasks/archive.yml
+    file: resource-cuberite-concourse/master/tasks/archive.yml
 
 - name: job-build-cuberite-release
   plan:
@@ -33,6 +33,6 @@ jobs:
   - get: resource-cuberite-release-src
     trigger: true
   - task: build
-    file: resource-cuberite-concourse/tasks/build.yml
+    file: resource-cuberite-concourse/release/tasks/build.yml
   - task: archive
-    file: resource-cuberite-concourse/tasks/archive.yml
+    file: resource-cuberite-concourse/release/tasks/archive.yml
