@@ -10,7 +10,7 @@ inputs:
   - name: resource-cuberite-master-src
 
 outputs:
-  - name: cmaked-cuberite-master-src
+  - name: resource-cuberite-master-src
 
 run:
   path: cmake
