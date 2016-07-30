@@ -30,6 +30,7 @@ jobs:
 - name: job-build-cuberite-release
   plan:
   - get: resource-cuberite-concourse
+    trigger: true
   - get: resource-cuberite-release-src
     trigger: true
   - task: build
