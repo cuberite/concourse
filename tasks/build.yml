@@ -8,10 +8,11 @@ image_resource:
 
 inputs:
 - name: resource-cuberite-master-src
+- name: scripts
 
 outputs:
 - name: built-cuberite-master-src
 
 run:
-  path: ../scripts/build-master.sh
+  path: scripts/build-master.sh
   dir: built-cuberite-master-src
