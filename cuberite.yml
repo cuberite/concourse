@@ -15,6 +15,7 @@ jobs:
 - name: job-build-cuberite-master
   plan:
   - get: resource-cuberite-concourse
+    trigger: true
   - get: resource-cuberite-master-src
     trigger: true
   - task: image-setup
