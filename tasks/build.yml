@@ -14,5 +14,6 @@ outputs:
 - name: built-cuberite-master-src
 
 run:
-  path: ls
-  args: [-la]
+  path: make
+  args: [-j4]
+  dir: cmake-prepared-cuberite-master-src

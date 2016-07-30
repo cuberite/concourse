@@ -14,5 +14,8 @@ outputs:
 
 run:
   path: cmake
-  args: [../resource-cuberite-master-src]
+  args:
+    - ../resource-cuberite-master-src
+    - -DCMAKE_BUILD_TYPE=RELEASE
+    - -DNO_NATIVE_OPTIMIZATION=1
   dir: cmake-prepared-cuberite-master-src
