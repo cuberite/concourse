@@ -4,7 +4,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: buildpack-deps
+    repository: andystanton/gcc-cmake-gls
 
 inputs:
   - name: resource-cuberite-master-src
@@ -14,5 +14,5 @@ outputs:
 
 run:
   path: apt-get
-  args: [install, cmake]
+  args: [install, cmake, -y]
   dir: resource-cuberite-master-src
