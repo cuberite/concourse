@@ -14,5 +14,5 @@ outputs:
 - name: built-cuberite-master-src
 
 run:
-  path: ../resource-cuberite-concourse/tasks/build-master.sh
+  path: ../resource-cuberite-concourse/tasks/master/build.sh
   dir: resource-cuberite-master-src
