@@ -13,5 +13,5 @@ outputs:
 - name: built-cuberite-master-src
 
 run:
-  path: make
+  path: ls
   dir: cmaked-cuberite-master-src
