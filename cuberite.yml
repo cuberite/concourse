@@ -20,3 +20,5 @@ jobs:
     trigger: true
   - task: cmake
     file: resource-cuberite-concourse/tasks/cmake.yml
+  - task: build
+    file: resource-cuberite-concourse/tasks/build.yml
