@@ -8,11 +8,10 @@ image_resource:
 
 inputs:
 - name: resource-cuberite-master-src
-- name: cmake-prepared-cuberite-master-src
 
 outputs:
 - name: built-cuberite-master-src
 
 run:
-  path: make
-  dir: ../cmake-prepared-cuberite-master-src
+  path: ../scripts/build-master.sh
+  dir: built-cuberite-master-src
