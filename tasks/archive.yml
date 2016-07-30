@@ -13,6 +13,9 @@ outputs:
 - name: artifacts-cuberite-master-src
 
 run:
-  path: ls
-  args: [-la]
+  path: tar
+  args:
+  - -zcvf
+  - ../artifacts-cuberite-master-src/cuberite.tar.gz
+  - Server
   dir: built-cuberite-master-src
