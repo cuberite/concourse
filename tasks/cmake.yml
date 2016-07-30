@@ -13,6 +13,6 @@ outputs:
   - name: cmaked-cuberite-master-src
 
 run:
-  path: cmake
-  args: [.]
+  path: ls
+  args: [-la]
   dir: resource-cuberite-master-src
