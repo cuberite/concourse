@@ -7,6 +7,7 @@ image_resource:
     repository: kaskada/cmake-gcc5
 
 inputs:
+- name: resource-cuberite-master-src
 - name: cmake-prepared-cuberite-master-src
 
 outputs:
